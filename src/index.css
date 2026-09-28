@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Fredoka', 'Nunito', system-ui, -apple-system, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+/* Custom 3D Button Effects for Kids UI matching reference image */
+.btn-3d-yellow {
+  background: linear-gradient(180deg, #fde047 0%, #eab308 50%, #ca8a04 100%);
+  border-bottom: 5px solid #854d0e;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35), inset 0 2px 2px rgba(255, 255, 255, 0.6);
+  transition: transform 0.1s ease, border-bottom 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-3d-yellow:hover {
+  filter: brightness(1.05);
+}
+
+.btn-3d-yellow:active {
+  transform: translateY(3px);
+  border-bottom: 2px solid #854d0e;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn-3d-green {
+  background: linear-gradient(180deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+  border-bottom: 5px solid #14532d;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35), inset 0 2px 2px rgba(255, 255, 255, 0.6);
+  transition: transform 0.1s ease, border-bottom 0.1s ease;
+}
+
+.btn-3d-green:hover {
+  filter: brightness(1.05);
+}
+
+.btn-3d-green:active {
+  transform: translateY(3px);
+  border-bottom: 2px solid #14532d;
+}
+
+.btn-3d-orange {
+  background: linear-gradient(180deg, #fb923c 0%, #f97316 50%, #ea580c 100%);
+  border-bottom: 5px solid #7c2d12;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35), inset 0 2px 2px rgba(255, 255, 255, 0.6);
+}
+
+.btn-3d-orange:active {
+  transform: translateY(3px);
+  border-bottom: 2px solid #7c2d12;
+}
+
+.btn-3d-gray {
+  background: linear-gradient(180deg, #94a3b8 0%, #64748b 50%, #475569 100%);
+  border-bottom: 5px solid #1e293b;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35), inset 0 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+.btn-3d-gray:active {
+  transform: translateY(3px);
+  border-bottom: 2px solid #1e293b;
+}
+
+/* JUNGLE TITLE LOGO STYLING */
+.jungle-title-top {
+  color: #ffde59;
+  text-shadow: 
+    -3px -3px 0 #78350f,  
+     3px -3px 0 #78350f,
+    -3px  3px 0 #78350f,
+     3px  3px 0 #78350f,
+     0 6px 0 #451a03,
+     0 10px 15px rgba(0,0,0,0.5);
+}
+
+.jungle-title-bottom {
+  color: #ffffff;
+  text-shadow: 
+    -3px -3px 0 #1e3a8a,  
+     3px -3px 0 #1e3a8a,
+    -3px  3px 0 #1e3a8a,
+     3px  3px 0 #1e3a8a,
+     0 6px 0 #0f172a,
+     0 10px 15px rgba(0,0,0,0.5);
+}
+
+/* Floating animation for jungle items */
+@keyframes jungleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+.animate-jungle-float {
+  animation: jungleFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-pop-in {
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.animate-wiggle {
+  animation: wiggle 0.8s ease-in-out infinite;
+}
